@@ -1,0 +1,15 @@
+/bin/
+/node_modules/
+/infrastructure/node_modules/
+.idea/
+.vim
+.npmrc
+out/
+*.class
+*.log
+*.iml
+**/target/
+.bsp/
+/project/
+.DS_Store
+.java-version
