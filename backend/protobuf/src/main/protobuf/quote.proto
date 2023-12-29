@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package io.vangogiel.grpc.stream.example;
+
+message QuoteRequest {
+  string origin = 1;
+  string destination = 2;
+}
+
+message QuoteResponse {
+  string origin = 1;
+  string destination = 2;
+  int64 departureTimeStampSeconds = 3;
+  int64 arrivalTimeStampSeconds = 4;
+  int32 transfers = 5;
+  double amount = 6;
+}
+
+service Quote {
+  rpc RequestQuoteStream(QuoteRequest) returns (stream QuoteResponse) {}
+}
