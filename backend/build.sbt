@@ -20,9 +20,9 @@ lazy val root =
         Dependencies.Compile.http4s,
         Dependencies.Compile.http4sDsl,
         Dependencies.Compile.https4sCirce,
-        Dependencies.Test.weaverCats
-      ),
-      testFrameworks += new TestFramework("weaver.framework.CatsEffect")
+        Dependencies.Compile.catsEffect,
+        Dependencies.Compile.fs2Core
+      )
     )
     .dependsOn(protobuf)
 
