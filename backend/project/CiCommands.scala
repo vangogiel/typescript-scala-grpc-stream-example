@@ -4,7 +4,7 @@ object CiCommands {
   def ciBuild: Command = Command.command("ciBuild") { state ⇒
     "clean" ::
       "scalafmtSbtCheck" :: "scalafmtCheck" :: "test:scalafmtCheck" ::
-      "coverageOn" :: "test" :: "coverageReport" :: "coverageOff" ::
+      "test" ::
       state
   }
 
